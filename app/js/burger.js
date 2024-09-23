@@ -3,7 +3,7 @@
 
 		$('.burger').append("<span class='burger__element'></span>");
 
-		let btn = $('.burger, .header-menu');
+		let btn = $('.burger, .header-menu-wrapper');
 
 		btn.click(function(){
 			btn.toggleClass('active');
