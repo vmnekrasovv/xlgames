@@ -67,6 +67,42 @@ body.lock {
 	padding: 0 var(--index);
 }
 
+.section {
+	padding-top: 50px;
+
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	&-title {
+		font: var(--text-size-xl);
+		color: #fff;
+		font-weight: 600;
+	}
+
+	&-link {
+		font: var(--text-size-m);
+		color: var(--color-orange);
+		text-decoration: none;
+		padding-right: 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 20px;
+			height: 20px;
+			background: url('../images/dest/icons/arrow_small.svg') no-repeat;
+			transform: rotate(-90deg);
+		}
+	}
+}
+
 .arrow-small {
 	width: 20px;
 	height: 20px;
