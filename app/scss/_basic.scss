@@ -68,6 +68,7 @@ body.lock {
 }
 
 .section {
+
 	padding-top: 50px;
 
 	&-top {
@@ -86,7 +87,6 @@ body.lock {
 		font: var(--text-size-m);
 		color: var(--color-orange);
 		text-decoration: none;
-		padding-right: 30px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
