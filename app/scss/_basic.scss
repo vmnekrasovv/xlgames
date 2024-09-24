@@ -128,7 +128,7 @@ body.lock {
 	background: var(--color-orange);
 	position: relative;
 	border: 2px solid transparent;
-
+	transition: .2s;
 
 	&:hover {
 		background: transparent;
@@ -148,6 +148,25 @@ body.lock {
 		top: calc(50% - 10px);
 		left: calc(50% - 10px);
 		background: url('../images/dest/icons/arrow_black.svg') no-repeat;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 24px 12px;
+	border-radius: 24px;
+	border: 2px solid transparent;
+	background: var(--color-orange);
+	text-align: center;
+	font: var(--text-size-m);
+	color: var(--color-dark);
+	text-decoration: none;
+	transition: .2s;
+
+	&:hover {
+		color: #fff;
+		background: transparent;
+		border-color: var(--color-orange);
 	}
 }
 
