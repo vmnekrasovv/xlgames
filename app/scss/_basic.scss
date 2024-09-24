@@ -59,6 +59,7 @@ body.lock {
 	background: var(--color-dark);
 	font-family: 'Inter';
 	font: var(--text-size-m);
+	color: #fff;
 }
 
 .container {
@@ -70,6 +71,11 @@ body.lock {
 .section {
 
 	padding-top: 50px;
+	margin-bottom: 80px;
+
+	@media (max-width: 576px) {
+		margin-bottom: 30px;
+	}
 
 	&-top {
 		display: flex;
@@ -103,10 +109,46 @@ body.lock {
 	}
 }
 
+.text-size-s { font: 12px/16px 'Inter'; }
+.text-size-m { font: 16px/20px 'Inter'; }
+.text-size-l { font: 16px/24px 'Inter'; }
+.text-size-xl { font: 28px/32px 'Inter'; }
+
 .arrow-small {
 	width: 20px;
 	height: 20px;
 	background: url('../images/dest/icons/arrow_small.svg') no-repeat;
+}
+
+.button-small {
+	display: block;
+	width: 48px;
+	height: 48px;
+	border-radius: 48px;
+	background: var(--color-orange);
+	position: relative;
+	border: 2px solid transparent;
+
+
+	&:hover {
+		background: transparent;
+		border-color: var(--color-orange);
+
+		&::after {
+			background: url('../images/dest/icons/arrow_white.svg') no-repeat;
+		}
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: calc(50% - 10px);
+		left: calc(50% - 10px);
+		background: url('../images/dest/icons/arrow_black.svg') no-repeat;
+	}
 }
 
 .logo {
