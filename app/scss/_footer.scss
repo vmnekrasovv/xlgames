@@ -1,3 +1,120 @@
 .footer {
-	
+	padding-top: 50px;
+	border-top: 1px solid var(--color-grey);
+
+	&__first-line {
+		margin-bottom: 80px;
+		display: flex;
+		gap: 130px;
+
+		@media (max-width: 768px) {
+			gap: 100px;
+		}
+
+		@media (max-width: 650px) {
+			gap: 40px;
+		}
+
+		@media (max-width: 576px) {
+			flex-direction: column;
+			gap: 50px;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__column {
+
+		&:first-child {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+	}
+
+	.socials {
+
+		&__item {
+
+			&.whatsapp {
+				background: url('../images/dest/icons/socials/whatsapp.svg') no-repeat;
+
+				&:hover {
+					background: url('../images/dest/icons/socials/whatsapp_active.svg') no-repeat;
+				}
+			}
+
+			&.discord {
+				background: url('../images/dest/icons/socials/discord.svg') no-repeat;
+
+				&:hover {
+					background: url('../images/dest/icons/socials/discord_active.svg') no-repeat;
+				}
+			}
+
+			&.telegram {
+				background: url('../images/dest/icons/socials/telegram.svg') no-repeat;
+
+				&:hover {
+					background: url('../images/dest/icons/socials/telegram_active.svg') no-repeat;
+				}
+			}
+
+		} // &__item
+	} // socials
+
+	&-menu {
+		display: flex;
+		gap: 190px;
+
+		@media (max-width: 990px) {
+			gap: 50px;
+		}
+
+		@media (max-width: 768px) {
+			gap: 30px;
+		}
+
+		@media (max-width: 576px) {
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		&__column {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		&__link {
+			font: var(--text-size-m);
+			text-decoration: none;
+			color: #fff;
+
+			&:hover {
+				color: var(--color-orange);
+			}
+		}
+	} // footer-menu
+
+	&__second-line {
+		display: flex;
+		gap: 10px;
+		padding-bottom: 30px;
+		justify-content: center;
+
+		@media (max-width: 576px) {
+			flex-direction: column;
+		}
+
+		span,a {
+			color: var(--color-grey-light);
+			font: var(--text-size-s);
+		}
+
+		a:hover {
+			color: var(--color-orange);
+		}	
+	}
+
 }
