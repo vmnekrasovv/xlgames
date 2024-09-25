@@ -53,6 +53,12 @@
 					left: 0;
 				}
 			}
+
+			@media (max-width: 375px) {
+				justify-content: flex-start;
+				top: 115px;
+				height: calc(100vh - 115px);
+			}
 		}
 
 		&__link {
@@ -69,6 +75,10 @@
 				width: 100%;
 				text-align: center;
 				padding: 7px 15px;
+			}
+
+			@media (max-width: 375px) {
+				text-align: left;
 			}
 		}
 
@@ -155,6 +165,10 @@
 					background: transparent;
 					color: var(--color-orange);
 				}
+			}
+
+			@media (max-width: 375px) {
+				justify-content: flex-start;
 			}
 		}
 	} // other-menu
