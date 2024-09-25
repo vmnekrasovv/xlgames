@@ -14,8 +14,7 @@
 
 	$(window).on('load resize', function(){
 			
-		let window_width = $(window).width();
-	
+		let window_width = window.innerWidth;
 	
 	//	otherMenu
 
