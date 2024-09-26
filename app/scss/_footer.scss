@@ -107,6 +107,16 @@
 			flex-direction: column;
 		}
 
+		.terms-privacy {
+			display: flex;
+			gap: 10px;
+
+
+			@media (max-width: 576px) {
+				flex-direction: column;
+			}
+		} 
+
 		span,a {
 			color: var(--color-grey-light);
 			font: var(--text-size-s);
@@ -116,5 +126,19 @@
 			color: var(--color-orange);
 		}	
 	}
+}
 
+.header .terms-privacy {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+
+	@media (max-width: 375px) {
+		align-items: flex-start;
+	}
+
+	a {
+		padding-left: 15px;
+	}
 }
