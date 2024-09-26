@@ -11,6 +11,27 @@
 			}
 		});
 
+		$('.section-tubs__tub').on('click', function(){
+			
+			$(this).addClass('active');
+			$(this).siblings().removeClass('active');
+
+			if($(this).hasClass('popular')) {
+				$('.servers-item').hide();
+				$('.servers-item.pop').show();
+			} else {
+				$('.servers-item').show();
+			}
+			
+		});
+
+		$('.search').on('focus', function(){
+			$(this).addClass('active');
+		}).on('blur', function(){
+			$(this).removeClass('active');
+		});
+
+
 	}); // document.ready
 
 
@@ -53,7 +74,13 @@
 		let serversItem = $('.servers-item');
 		let serversItem_width = serversItem.width();
 
-		serversItem.height(serversItem_width);
+		serversItem.each(function(i, el){
+			let elImg = el.querySelector('img');
+			let	elImgWidth = elImg.width;
+
+			el.height = elImgWidth;
+			elImg.height = elImgWidth;
+		});
 
 
 	});
