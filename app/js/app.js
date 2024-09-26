@@ -58,7 +58,7 @@
 			otherMenu.css({'display': 'flex'});
 		} 
 
-		else if(window_width < 769 && headerMenuWrapperActive) {
+		if(window_width < 769 && headerMenuWrapperActive) {
 			termsPrivacy.appendTo(headerMenuWrapper);
 		}
 
@@ -73,6 +73,7 @@
 			if($(this).hasClass('active')) {
 				termsPrivacy.appendTo(headerMenuWrapper);
 			} else {
+				headerMenuWrapper.removeClass('active');
 				termsPrivacy.appendTo(footerSecondLine);
 			}
 		});
