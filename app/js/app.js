@@ -54,20 +54,19 @@
 		if(window_width < 769){
 			headerMenu.after(otherMenu);
 			otherMenu.css({'display': 'flex'});
-
-			$('.burger').on('click', function(){
-				if($(this).hasClass('active')) {
-					termsPrivacy.appendTo(headerMenuWrapper);
-				} else {
-					termsPrivacy.appendTo(footerSecondLine);
-				}
-			});
-
 		} else {
 			otherMenu.appendTo(otherMenuWrapper);
 			otherMenu.css({'display': 'none'});
 			termsPrivacy.appendTo(footerSecondLine);
 		}
+
+		$('.burger').on('click', function(){
+			if($(this).hasClass('active')) {
+				termsPrivacy.appendTo(headerMenuWrapper);
+			} else {
+				termsPrivacy.appendTo(footerSecondLine);
+			}
+		});
 
 	// serversItem setHeight
 
