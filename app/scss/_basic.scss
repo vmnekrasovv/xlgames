@@ -138,6 +138,10 @@ a {
 			border-radius: 24px;
 			color: var(--color-grey-light);
 			cursor: pointer;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+			
 
 			&:hover {
 				border-color: var(--color-grey-light);
