@@ -56,11 +56,8 @@
 		if(window_width < 769){
 			headerMenu.after(otherMenu);
 			otherMenu.css({'display': 'flex'});
-		} 
-
-		if(window_width < 769 && headerMenuWrapperActive) {
 			termsPrivacy.appendTo(headerMenuWrapper);
-		}
+		} 
 
 		else if (window_width >= 769) {
 			otherMenu.appendTo(otherMenuWrapper);
