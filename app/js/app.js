@@ -50,14 +50,23 @@
 		let otherMenuWrapper = $('.other-menu-wrapper');
 		let footerSecondLine = $('.footer__second-line');
 
+		let headerMenuWrapperActive = $('.header-menu-wrapper').hasClass('active');
+
 
 		if(window_width < 769){
 			headerMenu.after(otherMenu);
 			otherMenu.css({'display': 'flex'});
-		} else {
+		} 
+
+		else if(window_width < 769 && headerMenuWrapperActive) {
+			termsPrivacy.appendTo(headerMenuWrapper);
+		}
+
+		else if (window_width >= 769) {
 			otherMenu.appendTo(otherMenuWrapper);
 			otherMenu.css({'display': 'none'});
 			termsPrivacy.appendTo(footerSecondLine);
+			headerMenuWrapper.removeClass('active');
 		}
 
 		$('.burger').on('click', function(){
