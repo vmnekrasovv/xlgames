@@ -50,13 +50,14 @@
 		let otherMenuWrapper = $('.other-menu-wrapper');
 		let footerSecondLine = $('.footer__second-line');
 
-		let headerMenuWrapperActive = $('.header-menu-wrapper').hasClass('active');
-
 
 		if(window_width < 769){
 			headerMenu.after(otherMenu);
 			otherMenu.css({'display': 'flex'});
-			termsPrivacy.appendTo(headerMenuWrapper);
+			
+			if(headerMenuWrapper.hasClass('active')) {
+				termsPrivacy.appendTo(headerMenuWrapper);
+			}
 		} 
 
 		else if (window_width >= 769) {
@@ -67,10 +68,12 @@
 		}
 
 		$('.burger').on('click', function(){
-			if($(this).hasClass('active')) {
+
+			headerMenuWrapperActive = $('.header-menu-wrapper').hasClass('active');
+
+			if(headerMenuWrapperActive) {
 				termsPrivacy.appendTo(headerMenuWrapper);
 			} else {
-				headerMenuWrapper.removeClass('active');
 				termsPrivacy.appendTo(footerSecondLine);
 			}
 		});

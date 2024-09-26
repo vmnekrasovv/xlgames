@@ -15,6 +15,7 @@
 	$(window).on('resize', function(){
 		if(window.innerWidth > 768){
 			$('.burger').removeClass('active');
+			$('.header-menu-wrapper').removeClass('active');
 			$('body').removeClass('lock');
 		}
 	});
