@@ -1,9 +1,10 @@
 .servers {
+
+	--gap: 32px;
 	
 	display: flex;
-	gap: 32px;
+	gap: var(--gap);
 	flex-wrap: wrap;
-
 
 	@media (max-width: 576px) {
 		flex-direction: column;
@@ -12,7 +13,6 @@
 
 	&-item {
 		width: 264px;
-		height: 264px;
 		flex: 0 0 264px;
 		overflow: hidden;
 		position: relative;
@@ -26,29 +26,22 @@
 			border-color: var(--color-orange);
 		}
 
-		@media (max-width: 1200px) {
-		    width: calc((100% - 64px) / 3);
+		@media (max-width: 1220px) {
+		    width: calc((100% - (var(--gap) * 2)) / 3);
 	        flex: auto;
-	        height: 264px;
 		}
 
 		@media (max-width: 990px) {
-		    width: calc((100% - 32px) / 2);
+		    width: calc((100% - var(--gap)) / 2);
 		}
 
 		@media (max-width: 576px) {
 			width: 100%;
-			flex: 0 0 264px;
-		}
-
-		@media (max-width: 375px) {
-			width: 100%;
-			height: 260px;
 		}
 
 		&__image {
 			width: 100%;
-			height: 264px;
+			display: block;
 			object-fit: cover;
 			object-position: top;
 		}
