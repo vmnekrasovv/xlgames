@@ -1,28 +1,33 @@
 (function($){
 
 	const headerMenuWrapper = $('.header-menu-wrapper');
+	const headerMenu = $('.header-menu');
+
+	const headerOther = $('.header-other');
+	const otherMenuWrapper = $('.other-menu-wrapper');
+	const otherMenu = $('.other-menu');
+	
 	const footerSecondLine = $('.footer__second-line');
 
-	const headerMenu = $('.header-menu');
-	const otherMenu = $('.other-menu');
-	const termsPrivacy = $('.terms-privacy')
-	const otherMenuWrapper = $('.other-menu-wrapper');
+	const termsPrivacy = $('.terms-privacy');
+	
+	const serversItem = $('.servers-item');
+	const serversItemImage = serversItem.find('.servers-item__image');
 
 
-	function setImgHeight(){
-		$('.servers-item').each(function(i, el){
-			let elImg = el.querySelector('img');
-			elImg.height = elImg.width;
+	function equivalent(obj){
+		obj.each(function(i, el){
+			el.height = el.width;
 		});
 	}
 
 	$(document).ready(function(){ 
 
-		$('.header-other').click(function(){
-			if($('.other-menu').css('display') == 'none'){
-				$('.other-menu').css({'display': 'flex'});
+		headerOther.click(function(){
+			if(otherMenu.css('display') == 'none'){
+				otherMenu.css({'display': 'flex'});
 			} else {
-				$('.other-menu').css({'display': 'none'});
+				otherMenu.hide();
 			}
 		});
 
@@ -32,13 +37,13 @@
 			$(this).siblings().removeClass('active');
 
 			if($(this).hasClass('popular')) {
-				$('.servers-item').hide();
+				serversItem.hide();
 				$('.servers-item.pop').show();
 			} else {
-				$('.servers-item').show();
+				serversItem.show();
 			}
 
-			setImgHeight();
+			equivalent(serversItemImage);
 			
 		});
 
@@ -61,8 +66,11 @@
 	}); // document.ready
 
 	$(window).on('load resize', function(){
+
+		equivalent(serversItemImage);
 	
 		let window_width = window.innerWidth;
+
 
 	// mergeMenu
 
@@ -70,8 +78,6 @@
 			
 			headerMenu.after(otherMenu);
 			otherMenu.css({'display': 'flex'});
-
-			console.log('window_width < 769', otherMenu);
 
 			if(headerMenuWrapper.hasClass('active')){
 				termsPrivacy.appendTo(headerMenuWrapper);
@@ -83,10 +89,6 @@
 			otherMenu.css({'display': 'none'});
 			termsPrivacy.appendTo(footerSecondLine);
 		}
-
-		// serversItem setHeight
-
-		setImgHeight();
 
 
 	}); // window load/resize
