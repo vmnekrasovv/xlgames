@@ -322,3 +322,50 @@ a {
 
 	} // &__item
 } // socials
+
+.terms-privacy {
+
+	display: flex;
+	gap: 10px;
+
+	@media (max-width: 576px) {
+		flex-direction: column;
+	}
+
+	span,a {
+		color: var(--color-grey-light);
+		font: var(--text-size-s);
+	}
+
+	a:hover {
+		color: var(--color-orange);
+	}
+}
+
+.header .terms-privacy {
+		
+	flex-direction: column;
+	align-items: center;
+
+	@media (max-width: 768px) {
+		flex: 2;
+		justify-content: center;
+	}
+
+	@media (max-width: 375px) {
+		align-items: flex-start;
+		flex: 1;
+	}
+
+	a {
+
+		color: #fff;
+		font: var(--text-size-m);
+		padding-left: 15px;
+
+		&:hover {
+			color: var(--color-orange);
+		}
+	}
+}
+

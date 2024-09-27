@@ -28,7 +28,7 @@
 			align-items: center;
 			transition: .4s;
 			gap: 5px;
-			flex: 0;
+			flex: 1;
 		}
 
 		&-wrapper {
@@ -36,16 +36,20 @@
 			transition: .2s left;
 
 			@media (max-width: 768px) {
+				
+				--gap: 84px;
+				--gap-menu: 50px;
 
 				position: absolute;
-				top: 84px;
+				top: var(--gap);
 				left: -200vw;
 				width: 100vw;
-				height: calc(100vh - 84px);
+				height: calc(100vh - var(--gap));
+				padding-top: 50px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				gap: 50px;
+				gap: var(--gap-menu);
 				background: var(--color-dark);
 				z-index: 2;
 
@@ -129,7 +133,7 @@
 
 		@media (max-width: 768px) {
 			display: flex;
-			flex: 0;
+			flex: 1;
 			flex-direction: column;
 			gap: 5px;
 			position: relative;
