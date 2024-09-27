@@ -12,14 +12,7 @@
 	const termsPrivacy = $('.terms-privacy');
 	
 	const serversItem = $('.servers-item');
-	const serversItemImage = serversItem.find('.servers-item__image');
 
-
-	function equivalent(obj){
-		obj.each(function(i, el){
-			el.height = el.width;
-		});
-	}
 
 	$(document).ready(function(){ 
 
@@ -42,8 +35,6 @@
 			} else {
 				serversItem.show();
 			}
-
-			equivalent(serversItemImage);
 			
 		});
 
@@ -66,8 +57,6 @@
 	}); // document.ready
 
 	$(window).on('load resize', function(){
-
-		equivalent(serversItemImage);
 	
 		let window_width = window.innerWidth;
 
