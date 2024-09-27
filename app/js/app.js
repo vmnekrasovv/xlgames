@@ -61,13 +61,15 @@
 
 		$(window).on('load resize', function(){
 	
-			const window_width = window.innerWidth;
+			let window_width = window.innerWidth;
 
 		// mergeMenu
 
 			if(window_width < 769){
 				headerMenu.after(otherMenu);
 				otherMenu.css({'display': 'flex'});
+
+				console.log('window_width < 769', otherMenu);
 
 				if(headerMenuWrapper.hasClass('active')){
 					termsPrivacy.appendTo(headerMenuWrapper);
