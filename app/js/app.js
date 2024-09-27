@@ -9,14 +9,14 @@
 	const otherMenuWrapper = $('.other-menu-wrapper');
 
 
-	$(document).ready(function(){ 
+	function setImgHeight(){
+		$('.servers-item').each(function(i, el){
+			let elImg = el.querySelector('img');
+			elImg.height = elImg.width;
+		});
+	}
 
-		function setImgHeight(){
-			$('.servers-item').each(function(i, el){
-				let elImg = el.querySelector('img');
-				elImg.height = elImg.width;
-			});
-		}
+	$(document).ready(function(){ 
 
 		$('.header-other').click(function(){
 			if($('.other-menu').css('display') == 'none'){
