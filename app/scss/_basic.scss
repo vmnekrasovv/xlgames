@@ -348,10 +348,11 @@ a {
 	align-items: center;
 
 	@media (max-width: 768px) {
-		flex: 1;
+		flex: 0;
+		gap: 10px;
 	}
 
-	@media (max-width: 375px) {
+	@media (max-width: 768px) {
 		align-items: flex-start;
 	}
 
@@ -359,11 +360,12 @@ a {
 
 		color: #fff;
 		font: var(--text-size-m);
-		padding-left: 15px;
+		padding: 7px 20px;
 
 		&:hover {
 			color: var(--color-orange);
 		}
+	
 	}
 }
 

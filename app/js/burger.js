@@ -7,6 +7,7 @@
 
 		btn.click(function(){
 			btn.toggleClass('active');
+			$('.header').toggleClass('active');
 			$('body').toggleClass('lock');
 		});
 
@@ -15,6 +16,7 @@
 	$(window).on('resize', function(){
 		if(window.innerWidth > 768){
 			$('.burger').removeClass('active');
+			$('.header').removeClass('active');
 			$('.header-menu-wrapper').removeClass('active');
 			$('body').removeClass('lock');
 		}
