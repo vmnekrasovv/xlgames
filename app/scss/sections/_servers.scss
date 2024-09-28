@@ -12,7 +12,7 @@
 	}
 
 	&-item {
-		width: 264px;
+		width: 268px;
 		// flex: 0 0 264px;
 		overflow: hidden;
 		position: relative;
@@ -82,9 +82,14 @@
 	}
 
 	.servers-item {
-		width: 264px;
-		height: 264px;
-		flex: 0 0 264px;
+		width: 268px;
+		height: 268px;
+		flex: 0 0 268px;
+		border: 2px solid transparent;
+
+		&:hover {
+			border-color: var(--color-orange);
+		}
 	}
 }
 
