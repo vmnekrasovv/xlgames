@@ -29,6 +29,10 @@
 	--text-size-l: 16px/24px 'Inter';
 	--text-size-xl: 28px/32px 'Inter'; 
 
+	--border-radius: 16px;
+
+	--gap: 32px;
+
 } 
 
 *, *::before, *::after {
@@ -175,11 +179,13 @@ a {
 }
 
 .search-label {
+
 	width: 124px;
 	height: 48px;
 	position: relative;
 
 	&::before {
+
 		position: absolute;
 		top: calc(50% - 10px);
 		left: 18px;
@@ -204,7 +210,7 @@ a {
 	border: 2px solid var(--color-grey-light);
 	transition: .2s background;
 	border-radius: 24px;
-	color: var(--color-grey-light);
+	color: #fff;
 	cursor: pointer;
 	background: var(--color-dark);
 	font: var(--text-size-m);
@@ -221,7 +227,6 @@ a {
 	}
 
 	&:focus {
-		color: #fff;
 		border-color: var(--color-orange);
 	}
 
@@ -269,6 +274,16 @@ a {
 	transform: rotate(135deg);
 }
 
+.input {
+	height: 48px;
+	padding: 12px 24px 14px;
+	display: inline-flex;
+	align-items: center;
+	color: #fff;
+	border: 2px solid var(--color-grey-light);
+	border-radius: 24px;
+}
+
 .button {
 	
 	position: relative;
@@ -276,6 +291,7 @@ a {
 	padding: 10px 24px 12px;
 	border-radius: 24px;
 	border: 2px solid transparent;
+	cursor: pointer;
 
 	text-align: center;
 	text-decoration: none;
