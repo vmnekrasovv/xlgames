@@ -101,14 +101,16 @@ a {
 		display: flex;
 		align-items: center;
 		gap: 17px;
-		cursor: pointer;
 		transition: .2s;
+	} 
+
+	a.section-title {
 
 		.arrow {
 			transition: .2s;
 			border-color: var(--color-orange);
 		}
-
+		
 		&:hover {
 			color: var(--color-orange);
 
@@ -116,6 +118,7 @@ a {
 				border-color: #fff;
 			}
 		}
+
 	}
 
 	&-link {
