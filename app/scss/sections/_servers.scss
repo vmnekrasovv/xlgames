@@ -41,8 +41,7 @@
 
 		&__image {
 			width: 100%;
-			--width: 100%;
-			height: var(--width);
+			height: auto;
 			display: block;
 			object-fit: cover;
 			object-position: top;

@@ -91,6 +91,11 @@
 	&-other {
 
 		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		transition: .2s;
 
 		@media (max-width: 768px) {
 			display: none;
@@ -100,18 +105,27 @@
 			color: #fff;
 			display: inline-block;
 			position: relative;
-			padding-right: 28px;
+			transition: .2s;
+		}
+
+		.arrow {
+			position: relative;
+			top: -2px;
+			right: -5px;
+			border-color: var(--color-orange);
+			transition: .2s;
+		}
+
+		&:hover {
+
 			cursor: pointer;
 
-			&::after {
-				display: block;
-				content: '';
-				position: absolute;
-				top: calc(50% - 10px);
-				right: 0;
-				width: 20px;
-				height: 20px;
-				background: url('../images/dest/icons/arrow_small.svg') no-repeat;
+			span {
+				color: var(--color-orange);
+			} 
+		
+			.arrow {
+				border-color: #fff;
 			}
 		}
 
@@ -158,6 +172,7 @@
 			font: var(--text-size-m);
 
 			&:hover {
+				color: var(--color-orange);
 				background: var(--color-grey);
 			}
 
