@@ -145,6 +145,10 @@
 		.section-top {
 			margin-bottom: 52px;
 		}
+
+		.section-title {
+			gap: 32px;
+		}
 	}
 
 	.news-container {
@@ -155,6 +159,10 @@
 		display: block;
 		width: 100%;
 		margin-bottom: 32px;
+		border-radius: 16px;
+		height: 264px;
+	    object-fit: cover;
+	    object-position: top;
 	}
 
 	.news-text {
