@@ -94,6 +94,13 @@ a {
 		margin-bottom: 32px;
 	}
 
+	&.section-page {
+
+		.section-top {
+			margin-bottom: 52px;
+		}
+	}
+
 	&-title {
 		font: var(--text-size-xl);
 		color: #fff;
@@ -102,7 +109,13 @@ a {
 		align-items: center;
 		gap: 17px;
 		transition: .2s;
+
+		&-second {
+			margin-bottom: 32px;
+		}
 	} 
+
+
 
 	a.section-title {
 
@@ -145,6 +158,11 @@ a {
 		}
 	}
 
+	&-text {
+		font: var(--text-size-l);
+		margin-bottom: 52px;
+	}
+
 	&__tubs-search {
 		display: flex;
 		gap: 12px;
@@ -178,6 +196,17 @@ a {
 				border-color: var(--color-orange);
 			}
 		}
+	}
+}
+
+.box {
+	border: 2px solid var(--color-grey-light);
+	border-radius: 16px;
+	padding: 32px;
+	transition: .2s border;
+
+	&:hover {
+		border-color: var(--color-orange);
 	}
 }
 
@@ -462,3 +491,4 @@ a {
 		}
 	}
 }
+

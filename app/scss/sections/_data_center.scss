@@ -59,19 +59,18 @@
 	}
 }
 
+.section.section-page {
+	
+	margin-bottom: 135px;
+
+	@media (max-width: 576px) {
+		margin-bottom: 80px;
+	}
+}
+
 .page-data-center {
 	
-	.section {
-		margin-bottom: 135px;
-
-		@media (max-width: 576px) {
-			margin-bottom: 80px;
-		}
-	}
-
-	.section-top {
-		margin-bottom: 52px;
-	}
+	
 
 	.section-text {
 		font: var(--text-size-l);
