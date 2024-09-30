@@ -98,6 +98,10 @@ a {
 
 		.section-top {
 			margin-bottom: 52px;
+
+			@media (max-width: 576px) {
+				margin-bottom: 32px;
+			}
 		}
 	}
 

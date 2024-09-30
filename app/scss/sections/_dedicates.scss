@@ -49,6 +49,15 @@
 		}
 
 		@media (max-width: 990px) {
+			border-spacing: 15px 0;
+		}
+
+		@media (max-width: 800px) {
+			border-spacing: 12px 0;
+		}
+
+		@media (max-width: 768px) {
+			
 			thead {
 				display: none;
 			}
@@ -73,12 +82,29 @@
 		th, td {
 			height: 64px;
 			vertical-align: center;
+
+			@media (max-width: 990px) {
+				font-size: 14px;
+			}
 		}
+
 
 		.button {
 			width: 104px;
 			height: 32px;
 			padding: 0;
+
+			@media (max-width: 990px) {
+				width: 90px;
+				height: 30px;
+				font-size: 12px;
+			}
+
+			@media (max-width: 800px) {
+				width: 80px;
+				height: 30px;
+				font-size: 12px;
+			}
 		}
 	}
 
