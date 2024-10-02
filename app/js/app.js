@@ -34,10 +34,9 @@
 			
 		});
 
-		$('.search').on('focus', function(){
-			$(this).addClass('active');
-		}).on('blur', function(){
-			$(this).removeClass('active');
+		$('.search').on('focus blur', function(e){
+			if(e.type == 'focus') $(this).addClass('active');
+			if(e.type == 'blur') $(this).removeClass('active');
 		});
 
 
