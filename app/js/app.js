@@ -20,17 +20,23 @@
 			otherMenu.toggle();
 		});
 
-		$('.section-tubs__tub').on('click', function(){
+		$('.section-tabs__tab').on('click', function(){
 
 			$(this).addClass('active');
 			$(this).siblings().removeClass('active');
 
-			if($(this).hasClass('popular')) {
-				serversItem.hide();
-				$('.servers-item.pop').show();
-			} else {
-				serversItem.show();
-			}
+			let dataTab = $(this).attr('data-tab');
+
+			serversItem.each(function(i, el){
+
+				if(dataTab){
+					if($(el).attr('data-tab') == dataTab) $(el).show();
+					else $(el).hide();
+				} else {
+					$(el).show();
+				}
+
+			});
 			
 		});
 

@@ -167,18 +167,18 @@ a {
 		margin-bottom: 52px;
 	}
 
-	&__tubs-search {
+	&__tabs-search {
 		display: flex;
 		gap: 12px;
 		margin-bottom: 50px;
 	}
 
-	&-tubs {
+	&-tabs {
 		
 		display: flex;
 		gap: 12px;
 
-		&__tub {
+		&__tab {
 			padding: 12px 22px 14px;
 			border: 2px solid var(--color-grey-light);
 			transition: .2s background;
