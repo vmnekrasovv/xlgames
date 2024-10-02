@@ -17,11 +17,7 @@
 	$(document).ready(function(){ 
 
 		headerOther.click(function(){
-			if(otherMenu.css('display') == 'none'){
-				otherMenu.css({'display': 'flex'});
-			} else {
-				otherMenu.hide();
-			}
+			otherMenu.toggle();
 		});
 
 		$('.section-tubs__tub').on('click', function(){
@@ -66,7 +62,7 @@
 		if(window_width < 769){
 			
 			headerMenu.after(otherMenu);
-			otherMenu.css({'display': 'flex'});
+			otherMenu.show();
 
 			if(headerMenuWrapper.hasClass('active')){
 				termsPrivacy.appendTo(headerMenuWrapper);
@@ -75,7 +71,7 @@
 		} 
 		else {
 			otherMenu.appendTo(otherMenuWrapper);
-			otherMenu.css({'display': 'none'});
+			otherMenu.hide();
 			termsPrivacy.appendTo(footerSecondLine);
 		}
 
