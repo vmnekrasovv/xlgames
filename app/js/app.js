@@ -30,8 +30,10 @@
 			serversItem.each(function(i, el){
 
 				if(dataTab){
-					if($(el).attr('data-tab') == dataTab) $(el).show();
-					else $(el).hide();
+					// if($(el).attr('data-tab') == dataTab) $(el).show();
+					// else $(el).hide();
+				
+					$(el).attr('data-tab') == dataTab ? $(el).show() : $(el).hide();
 				} else {
 					$(el).show();
 				}
